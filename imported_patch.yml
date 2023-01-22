@@ -1,4 +1,20 @@
 Version: 1.2
+
+PRX-rbYkgZMgx8Prd7WUAA39oYAdWcNo-0:
+  "cellSpurs urgent commands hack - 4.87":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ All ]
+        BLUS30109: [ All ]
+        BLJM67001: [ All ]
+        NPUB31633: [ All ]
+        NPEB02182: [ All ]
+    Author: elad335
+    Notes: "Workaround for freezes in Metal Gear Solid 4.\nThis patch applies to a firmware file for all games!\nUsage outside of Metal Gear Solid 4 is for debug purposes only.\nYou must have firmware version of exactly 4.87 in order to use it.\n\nKnown to affect:\nMetal Gear Solid 4"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x182B8, 0x38000002 ]
+
 PRX-oM7itnHHZPcaVx6KRGhZcv0o4gJj-0:
   "cellSpurs urgent commands hack - 4.88":
     Games:
@@ -14,168 +30,83 @@ PRX-oM7itnHHZPcaVx6KRGhZcv0o4gJj-0:
     Patch:
       - [ be32, 0x182B8, 0x38000002 ]
 
-PPU-9712144d93487f0b62e39f55e175af783b58af72:
-  "Disable shadows":
+PRX-WHnKAK6U9UApL2YMgjU3c5ozpTUM-0:
+  "cellSpurs urgent commands hack - 4.89":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 01.00 ]
-    Author: TriggerHappy
-    Notes: "Disabling shadows can give a significant performance boost."
+        BLES00246: [ All ]
+        BLUS30109: [ All ]
+        BLJM67001: [ All ]
+        NPUB31633: [ All ]
+        NPEB02182: [ All ]
+    Author: elad335
+    Notes: "Workaround for freezes in Metal Gear Solid 4.\nThis patch applies to a firmware file for all games!\nUsage outside of Metal Gear Solid 4 is for debug purposes only.\nYou must have firmware version of exactly 4.89 in order to use it.\n\nKnown to affect:\nMetal Gear Solid 4"
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x1358B8, 0x4E800020 ]
+      - [ be32, 0x182B8, 0x38000002 ]
 
 PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
-  "Disable shadows":
+  "Crash fix":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
     Author: TriggerHappy
-    Notes: "Disabling shadows can give a significant performance boost."
+    Notes: "workaround for 0x68 crash"
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x132354, 0x4E800020 ]
-  "Remove fog":
+      - [ be32, 0x1409F8, 0x60000000 ]
+      - [ be32, 0x140A10, 0x60000000 ]
+      - [ be32, 0x140A44, 0x60000000 ]
+  "Flickering textures fix":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLUS30109: [ 02.00 ]
     Author: TriggerHappy
-    Notes: "Does not provide any performance benefit."
+    Notes: "Workaround for flickering ground textures"
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xEAA08, 0x4E800020 ]
-  "Reduce stage quality":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0xFA7EC, 0x4E800020 ]
-      - [ be32, 0x10FAEC, 0x4E800020 ]
-  "Disable HUD":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Removes the ingame HUD. Useful for videos and screenshots."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0xF0410, 0x60000000 ]
-  "Disable spawned effects":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Removes some effects such as explosions and smoke. Provides a moderate performance boost."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x12BCFC, 0x2B8A0004 ]
-
-PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
-  "Disable shadows":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Disabling shadows can give a significant performance boost."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x130BF4, 0x4E800020 ]
-  "Remove fog":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Does not provide any performance benefit."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0xE92C8, 0x4E800020 ]
-  "Reduce stage quality":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0xF90AC, 0x4E800020 ]
-      - [ be32, 0x10E3AC, 0x4E800020 ]
-  "Disable HUD":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Removes the ingame HUD. Useful for videos and screenshots."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0xEECD0, 0x60000000 ]
-  "Disable spawned effects":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        NPUB31633: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Removes some effects such as explosions and smoke. Provides a moderate performance boost."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x12A59C, 0x2B8A0004 ]
+      - [ be32, 0x0EAAC8, 0x60003000 ]
 
 PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
-  "Disable shadows":
+  "Crash fix":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
     Author: TriggerHappy
-    Notes: "Disabling shadows can give a significant performance boost."
+    Notes: "workaround for 0x68 crash"
     Patch Version: 1.0
     Patch:
-      - [ be32, 0x132354, 0x4E800020 ]
-  "Remove fog":
+      - [ be32, 0x1409F8, 0x60000000 ]
+      - [ be32, 0x140A10, 0x60000000 ]
+      - [ be32, 0x140A44, 0x60000000 ]
+  "Flickering textures fix":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
         BLES00246: [ 02.00 ]
     Author: TriggerHappy
-    Notes: "Does not provide any performance benefit."
+    Notes: "Workaround for flickering ground textures"
     Patch Version: 1.0
     Patch:
-      - [ be32, 0xEAA08, 0x4E800020 ]
-  "Reduce stage quality":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Removes some transparency related effects from stages. Provides a small performance boost."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0xFA7EC, 0x4E800020 ]
-      - [ be32, 0x10FAEC, 0x4E800020 ]
-  "Disable HUD":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Removes the ingame HUD. Useful for videos and screenshots."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0xF0410, 0x60000000 ]
-  "Disable spawned effects":
-    Games:
-      "Metal Gear Solid 4: Guns of the Patriots":
-        BLES00246: [ 02.00 ]
-    Author: TriggerHappy
-    Notes: "Removes some effects such as explosions and smoke. Provides a moderate performance boost."
-    Patch Version: 1.0
-    Patch:
-      - [ be32, 0x12BCFC, 0x2B8A0004 ]
+      - [ be32, 0x0EAAC8, 0x60003000 ]
 
-OVL-a86de0a3c096dc8299a8b8a50b8feb6fa1e1d2ea:
-  "Disable snow effect":
+PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
+  "Crash fix":
     Games:
       "Metal Gear Solid 4: Guns of the Patriots":
-        BLUS30109: [ 02.00 ]
+        NPUB31633: [ 02.00 ]
     Author: TriggerHappy
-    Notes: "Removes  the heavy snow effect on the shadow moses stage."
+    Notes: "workaround for 0x68 crash"
     Patch Version: 1.0
     Patch:
-          - [ be32, 0x302A1400, 0x4E800020 ]
+      - [ be32, 0x13F298, 0x60000000 ]
+      - [ be32, 0x13F2B0, 0x60000000 ]
+      - [ be32, 0x13F2E4, 0x60000000 ]
+  "Flickering textures fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: TriggerHappy
+    Notes: "Workaround for flickering ground textures"
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0E9388, 0x60003000 ]

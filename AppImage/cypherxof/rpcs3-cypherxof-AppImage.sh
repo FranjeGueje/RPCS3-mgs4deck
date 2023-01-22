@@ -1,5 +1,14 @@
 #! /bin/bash
 
+# Advertencia
+echo -ne "¡Mucho cuidado! A partir de este punto se descargará mucho contenido de la web y se instalarán paquetes pacman sin confirmación.\nEste script es solo apto \
+para entornos de desarrollo controlados, por ejemplo, dockers.\n\nTenlo en cuenta si no quieres romper tu SSOO.\n"
+
+echo -ne "Be very careful! From this point on, a lot of content will be downloaded from the web and pacman packages will be installed without confirmation.\n\
+This script is only suitable for controlled development environments, for example, dockers."
+
+read -pr "Press any key to continue ..."
+
 #Actualizamos antes de nada
 pacman -Suy --noconfirm
 
@@ -12,12 +21,12 @@ pacman -S glew openal cmake vulkan-validation-layers qt5-base qt5-declarative sd
 
 #Descargamos mediante git
 git clone https://github.com/cipherxof/rpcs3.git -b patch-1 && cd rpcs3 && git submodule update --init
-mkdir ../build && cd ../build/
+mkdir ../build
+cd ../build/ || exit 1
 cmake ../rpcs3 -DCMAKE_INSTALL_PREFIX=/usr -DUSE_NATIVE_INSTRUCTIONS=ON
  
- #Probar a forzar:
- #CC=gcc CXX=g++ CFLAGS="-O3 -march=znver2 -mtune=znver2" CXXFLAGS="-O3 -march=znver2 -mtune=znver2" cmake ../rpcs3 -DCMAKE_INSTALL_PREFIX=/usr -DUSE_NATIVE_INSTRUCTIONS=OFF
-
+    #Probar a forzar:
+    #CC=gcc CXX=g++ CFLAGS="-O3 -march=znver2 -mtune=znver2" CXXFLAGS="-O3 -march=znver2 -mtune=znver2" cmake ../rpcs3 -DCMAKE_INSTALL_PREFIX=/usr -DUSE_NATIVE_INSTRUCTIONS=OFF
 
 #Ya está preparado para compilar y compilamos
 make 
