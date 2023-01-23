@@ -5,9 +5,9 @@ echo -ne "¡Mucho cuidado! A partir de este punto se descargará mucho contenido
 para entornos de desarrollo controlados, por ejemplo, dockers.\n\nTenlo en cuenta si no quieres romper tu SSOO.\n"
 
 echo -ne "Be very careful! From this point on, a lot of content will be downloaded from the web and pacman packages will be installed without confirmation.\n\
-This script is only suitable for controlled development environments, for example, dockers."
+This script is only suitable for controlled development environments, for example, dockers.\n\n***"
 
-read -pr "Press any key to continue ..."
+read -p "Press any key to continue ..."
 
 #Actualizamos antes de nada
 pacman -Suy --noconfirm

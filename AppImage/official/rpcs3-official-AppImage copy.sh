@@ -20,7 +20,7 @@ pacman -Su wget bash-completion git cmake base-devel --noconfirm
 pacman -S glew openal cmake vulkan-validation-layers qt5-base qt5-declarative sdl2 qt5-multimedia qt5-svg --noconfirm
 
 #Descargamos mediante git
-git clone https://github.com/cipherxof/rpcs3.git -b patch-1 && cd rpcs3 && git submodule update --init
+git clone https://github.com/rpcs3/rpcs3.git && cd rpcs3 && git submodule update --init
 mkdir ../build
 cd ../build/ || exit 1
 cmake ../rpcs3 -DCMAKE_INSTALL_PREFIX=/usr -DUSE_NATIVE_INSTRUCTIONS=ON
